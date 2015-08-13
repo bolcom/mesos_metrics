@@ -14,16 +14,16 @@ type MasterMetrics struct {
 	DiskUsed                                         int64 `json:"master/disk_used"`
 	DroppedMessages                                  int64 `json:"master/dropped_messages"`
 
-	Elected                                          float64 `json:"master/elected"`
+	Elected                                          int64 `json:"master/elected"`
 
-	EventQueueDispatches                             float64 `json:"master/event_queue_dispatches"`
-	EventQueueHttpRequests                           float64 `json:"master/event_queue_http_requests"`
-	EventQueueMessages                               float64 `json:"master/event_queue_messages"`
+	EventQueueDispatches                             int64 `json:"master/event_queue_dispatches"`
+	EventQueueHttpRequests                           int64 `json:"master/event_queue_http_requests"`
+	EventQueueMessages                               int64 `json:"master/event_queue_messages"`
 
-	FrameworksActive                                 float64 `json:"master/frameworks_active"`
-	FrameworksConnected                              float64 `json:"master/frameworks_connected"`
-	FrameworksDisconnected                           float64 `json:"master/frameworks_disconnected"`
-	FrameworksInactive                               float64 `json:"master/frameworks_inactive"`
+	FrameworksActive                                 int64 `json:"master/frameworks_active"`
+	FrameworksConnected                              int64 `json:"master/frameworks_connected"`
+	FrameworksDisconnected                           int64 `json:"master/frameworks_disconnected"`
+	FrameworksInactive                               int64 `json:"master/frameworks_inactive"`
 
 	InvalidFrameworkToExecutorMessages               int64 `json:"master/invalid_framework_to_executor_messages"`
 	InvalidStatusUpdateAcknowledgements              int64 `json:"master/invalid_status_update_acknowledgements"`
@@ -52,7 +52,7 @@ type MasterMetrics struct {
 	MessagesUnregisterFramework                      int64 `json:"master/messages_unregister_framework"`
 	MessagesUnregisterSlave                          int64 `json:"master/messages_unregister_slave"`
 
-	OutstandingOffers                                float64 `json:"master/outstanding_offers"`
+	OutstandingOffers                                int64 `json:"master/outstanding_offers"`
 	RecoverySlaveRemovals                            int64 `json:"master/recovery_slave_removals"`
 
 	SlaveRegistrations                               int64 `json:"master/slave_registrations"`
@@ -60,10 +60,10 @@ type MasterMetrics struct {
 	SlaveReregistrations                             int64 `json:"master/slave_reregistrations"`
 	SlaveShutdownsCanceled                           int64 `json:"master/slave_shutdowns_canceled"`
 	SlaveShutdownsScheduled                          int64 `json:"master/slave_shutdowns_scheduled"`
-	SlavesActive                                     float64 `json:"master/slaves_active"`
-	SlavesConnected                                  float64 `json:"master/slaves_connected"`
-	SlavesDisconnected                               float64 `json:"master/slaves_disconnected"`
-	SlavesInactive                                   float64 `json:"master/slaves_inactive"`
+	SlavesActive                                     int64 `json:"master/slaves_active"`
+	SlavesConnected                                  int64 `json:"master/slaves_connected"`
+	SlavesDisconnected                               int64 `json:"master/slaves_disconnected"`
+	SlavesInactive                                   int64 `json:"master/slaves_inactive"`
 
 	TaskFailedSourceSlaveReasonCommandExecutorFailed int64 `json:"master/task_failed/source_slave/reason_command_executor_failed"`
 

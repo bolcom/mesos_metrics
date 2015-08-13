@@ -148,16 +148,16 @@ func TestMasterMetricsJsonMapping(t *testing.T) {
 	assert.EqualValues(0, stats.DiskUsed)
 	assert.EqualValues(1, stats.DroppedMessages)
 
-	assert.InDelta(1, stats.Elected, 0.01)
+	assert.EqualValues(1, stats.Elected)
 
-	assert.InDelta(2, stats.EventQueueDispatches, 0.01)
-	assert.InDelta(0, stats.EventQueueHttpRequests, 0.01)
-	assert.InDelta(0, stats.EventQueueMessages, 0.01)
+	assert.EqualValues(2, stats.EventQueueDispatches)
+	assert.EqualValues(0, stats.EventQueueHttpRequests)
+	assert.EqualValues(0, stats.EventQueueMessages)
 
-	assert.InDelta(1, stats.FrameworksActive, 0.01)
-	assert.InDelta(1, stats.FrameworksConnected, 0.01)
-	assert.InDelta(0, stats.FrameworksDisconnected, 0.01)
-	assert.InDelta(0, stats.FrameworksInactive, 0.01)
+	assert.EqualValues(1, stats.FrameworksActive)
+	assert.EqualValues(1, stats.FrameworksConnected)
+	assert.EqualValues(0, stats.FrameworksDisconnected)
+	assert.EqualValues(0, stats.FrameworksInactive)
 
 	assert.EqualValues(0, stats.InvalidFrameworkToExecutorMessages)
 	assert.EqualValues(0, stats.InvalidStatusUpdateAcknowledgements)
@@ -186,7 +186,7 @@ func TestMasterMetricsJsonMapping(t *testing.T) {
 	assert.EqualValues(0, stats.MessagesUnregisterFramework)
 	assert.EqualValues(0, stats.MessagesUnregisterSlave)
 
-	assert.InDelta(0, stats.OutstandingOffers, 0.01)
+	assert.EqualValues(0, stats.OutstandingOffers)
 	assert.EqualValues(0, stats.RecoverySlaveRemovals)
 
 	assert.EqualValues(0, stats.SlaveRegistrations)
@@ -194,10 +194,10 @@ func TestMasterMetricsJsonMapping(t *testing.T) {
 	assert.EqualValues(2, stats.SlaveReregistrations)
 	assert.EqualValues(0, stats.SlaveShutdownsCanceled)
 	assert.EqualValues(0, stats.SlaveShutdownsScheduled)
-	assert.InDelta(2, stats.SlavesActive, 0.01)
-	assert.InDelta(2, stats.SlavesConnected, 0.01)
-	assert.InDelta(0, stats.SlavesDisconnected, 0.01)
-	assert.InDelta(0, stats.SlavesInactive, 0.01)
+	assert.EqualValues(2, stats.SlavesActive)
+	assert.EqualValues(2, stats.SlavesConnected)
+	assert.EqualValues(0, stats.SlavesDisconnected)
+	assert.EqualValues(0, stats.SlavesInactive)
 
 	assert.EqualValues(57, stats.TaskFailedSourceSlaveReasonCommandExecutorFailed)
 
