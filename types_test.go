@@ -206,9 +206,9 @@ func TestMasterMetricsJsonMapping(t *testing.T) {
 	assert.EqualValues(45, stats.TasksFinished)
 	assert.EqualValues(184, stats.TasksKilled)
 	assert.EqualValues(0, stats.TasksLost)
-	assert.InDelta(35, stats.TasksRunning, 0.01)
-	assert.InDelta(0, stats.TasksStaging, 0.01)
-	assert.InDelta(0, stats.TasksStarting, 0.01)
+	assert.EqualValues(35, stats.TasksRunning)
+	assert.EqualValues(0, stats.TasksStaging)
+	assert.EqualValues(0, stats.TasksStarting)
 
 	assert.InDelta(488714.649007872, stats.UptimeSecs, 0.01)
 

@@ -67,14 +67,14 @@ type MasterMetrics struct {
 
 	TaskFailedSourceSlaveReasonCommandExecutorFailed int64 `json:"master/task_failed/source_slave/reason_command_executor_failed"`
 
-	TasksError                                       int64   `json:"master/tasks_error"`
-	TasksFailed                                      int64   `json:"master/tasks_failed"`
-	TasksFinished                                    int64   `json:"master/tasks_finished"`
-	TasksKilled                                      int64   `json:"master/tasks_killed"`
-	TasksLost                                        int64   `json:"master/tasks_lost"`
-	TasksRunning                                     float64 `json:"master/tasks_running"`
-	TasksStaging                                     float64 `json:"master/tasks_staging"`
-	TasksStarting                                    float64 `json:"master/tasks_starting"`
+	TasksError                                       int64 `json:"master/tasks_error"`
+	TasksFailed                                      int64 `json:"master/tasks_failed"`
+	TasksFinished                                    int64 `json:"master/tasks_finished"`
+	TasksKilled                                      int64 `json:"master/tasks_killed"`
+	TasksLost                                        int64 `json:"master/tasks_lost"`
+	TasksRunning                                     int64 `json:"master/tasks_running"`
+	TasksStaging                                     int64 `json:"master/tasks_staging"`
+	TasksStarting                                    int64 `json:"master/tasks_starting"`
 
 	UptimeSecs                                       float64 `json:"master/uptime_secs"`
 
