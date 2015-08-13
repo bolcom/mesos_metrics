@@ -14,9 +14,6 @@
 
 package mesos_metrics
 
-// Counter == int64
-// Gauge   == float64
-
 // Metrics from endpoint /{master}:5050/metrics/snapshot
 // Mesos version 0.22.1
 type MasterMetrics struct {
